@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    /* box-shadow: 0 1px 20px #fff; */
+}
+
+.header__logo-link {
+    margin-top: 10px;
+    margin-left: 50px;
+    display: block;
+}
+
+.header__video {
+    width: 100px;
+}
