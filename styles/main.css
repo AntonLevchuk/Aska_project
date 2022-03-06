@@ -1,9 +1,0 @@
-@import url("blocks/resets.css");
-@import url("blocks/header.css");
-@import url("blocks/nav.css");
-@import url("blocks/card.css");
-
-body {
-    background-color: black;
-    font-family: 'Josefin Sans', sans-serif;
-}
