@@ -2,8 +2,9 @@
 @import url("/aska/gang/static/css/blocks/header.css");
 @import url("/aska/gang/static/css/blocks/nav.css");
 @import url('/aska/gang/static/css/blocks/card.css');
+@import url('/aska/gang/static/css/blocks/join_us.css');
 
-body {
+* {
     background-color: black;
     font-family: 'Josefin Sans', sans-serif;
 }
