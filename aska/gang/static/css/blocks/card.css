@@ -10,9 +10,7 @@
 .cards-container {
   margin: 0 auto;
 
-  /* align-items: center; */
-
-  width: calc(160px * 4 + (30px * 2) * 4);
+  width: calc(199px * 4);
 }
 
 .card-container {
@@ -27,16 +25,12 @@
   
   
   padding: 5px 10px;
-  margin: 0 30px 10px;
+  margin: 0 auto 30px;
 
   box-shadow: 1px 1px 10px #DCDCDC;
   
   color: #fff;
   text-transform: uppercase;
-}
-
-.card-container:nth-child(n + 5) {
-  margin: 30px auto;
 }
 
   

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 
 <div class="cards-container">
@@ -6,23 +7,9 @@
     {% for item in member %}
     <div class="card-container">
       <img
-          {% if item.id == 1 %}
-          src="/aska/gang/static/img/members/hideko.jpg" 
-          {% elif item.id == 2 %}
-          src="/aska/gang/static/img/members/justice.png"
-          {% elif item.id == 3 %}
-          src="/aska/gang/static/img/members/hotaru.jpg"
-          {% elif item.id == 4 %}
-          src="/aska/gang/static/img/members/rellim.jpg"
-          {% elif item.id == 5 %}
-          src="/aska/gang/static/img/members/sqlkersy.jpg"
-          {% elif item.id == 6 %}
-          src="/aska/gang/static/img/members/hajime.png"
-          {% elif item.id == 7 %}
-          src="/aska/gang/static/img/members/sayome.jpg"
-          {% endif %}
-          alt="Card img" 
-          class="card-container__img"
+          src="{{ '/aska'|add:item.photo.url }}"
+          alt="Card img"
+          class="card-container__img" 
       >
       <div class="card-container__title-block">
         <h2 class="title">{{ item.name }}</h2>
