@@ -2,14 +2,22 @@
 {% block content %}
 
 <div class="application-form-container">
-    <img src="/aska/gang/static/img/form_banner/form_banner.jpg" alt="form banner" class="form__img">
+    <div class="application-form-containe__banner-block">
+        <img src="/aska/gang/static/img/form_banner/form_banner.jpg" alt="form banner" class="form__img">
+    </div>
     <h1 class="application-form-container__title">Application form</h1>
     <form method="post" class="application-form">
         {% csrf_token %}
-        <input type="text" placeholder="Nickname" class="form__input nickname">
+        <!-- {{form}} -->
+        {{ form.nickname }}
+        {{ form.ds_name }}
+        {{ form.edit_link }}
+        {{ form.other_links }}
+        <span>{{ error }}</span>
+        <!-- <input type="text" placeholder="Nickname" class="form__input nickname">
         <input type="text" placeholder="Discord name (example#1234)" class="form__input ds-name">
         <input type="text" placeholder="Edit link" class="form__input edit-link">
-        <input type="text" placeholder="Contacts (IG or others)" class="form__input contacts">
+        <input type="text" placeholder="Contacts (IG or others)" class="form__input contacts">  -->
         <button type="submit" class="form__button">Submit</button>
     </form>
 </div> 

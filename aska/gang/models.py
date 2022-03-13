@@ -28,7 +28,7 @@ class Application(models.Model):
     result = models.CharField(max_length=20, blank=True)
 
     def __str__(self):
-        return self.nickname, self.ds_name
+        return self.nickname
 
     class Meta:
         verbose_name = 'Application'

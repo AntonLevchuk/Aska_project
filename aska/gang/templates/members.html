@@ -1,32 +1,47 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="cards">
+<div class="cards-container">
+  <div class="cards">
+    {% for item in member %}
     <div class="card-container">
-      <img 
-           src="/aska/gang/static/img/members/justice.png" 
-           alt="Card img" 
-           class="card-container__img"
+      <img
+          {% if item.id == 1 %}
+          src="/aska/gang/static/img/members/hideko.jpg" 
+          {% elif item.id == 2 %}
+          src="/aska/gang/static/img/members/justice.png"
+          {% elif item.id == 3 %}
+          src="/aska/gang/static/img/members/hotaru.jpg"
+          {% elif item.id == 4 %}
+          src="/aska/gang/static/img/members/rellim.jpg"
+          {% elif item.id == 5 %}
+          src="/aska/gang/static/img/members/sqlkersy.jpg"
+          {% elif item.id == 6 %}
+          src="/aska/gang/static/img/members/hajime.png"
+          {% elif item.id == 7 %}
+          src="/aska/gang/static/img/members/sayome.jpg"
+          {% endif %}
+          alt="Card img" 
+          class="card-container__img"
       >
       <div class="card-container__title-block">
-        <h2 class="title">Justice</h2>
-        <p class="title-description">Discord: Justice#2315</p>
+        <h2 class="title">{{ item.name }}</h2>
+        <p class="title-description">Discord: {{ item.ds_tag }}</p>
       </div>
       <div class="card-container__description">
         <a 
-           href="https://www.youtube.com/c/Justice_ask" 
+           href="{{ item.yt_link }}" 
            class="description-link  youtube__link"
         >YouTube</a>
         <a
-           href="https://www.instagram.com/justice.ask/"
+           href="{{ item.ins_link }}"
            class="description-link instagram__link"
         >Instagram</a>
-        <!-- <a
-           href="https://www.tiktok.com/@im.justice"
-           class="description-link tik-tok__link"
-        >TikTok</a> -->
       </div>
     </div>
+    {% endfor %}
   </div>
+</div>
+
 
 {% endblock %}
