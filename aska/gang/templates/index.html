@@ -1,3 +1,43 @@
-{% extends 'base.html' %}
-{% block content %}
-{% endblock %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo-container">
+            <a href="{% url 'home' %}" class="header__logo-link">
+                <video autoplay muted loop preload="auto" class="header__video">
+                    <source type="video/mov" src="{% static 'videos/animated logo_transparent.mov' %}">
+                    <source type="video/webm" src="{% static 'videos/animated-logo.webm' %}">
+                </video>
+            </a>
+        </div>
+        <nav class="nav">
+            <ul class="nav_list">
+                <li class="nav__item">
+                    <a href="{% url 'home' %}" class="nav-link">Home</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="{% url 'members' %}" class="nav-link">Members</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="{% url 'join_us' %}" class="nav-link">Join Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

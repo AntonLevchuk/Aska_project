@@ -6,11 +6,11 @@ from django.shortcuts import redirect, render
 from .models import Member, Application
 from .forms import ApplicationForm
 
-def index(request):
+def main(request):
     context = {
         'title': 'Aska', 
     }
-    return render(request, 'index.html', context)
+    return render(request, 'main.html', context)
 
 
 def members(request):
